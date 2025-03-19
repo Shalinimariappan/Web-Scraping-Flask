@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results - University of Madras</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Results</h1>
+
+        <!-- ✅ Success/ Error Message -->
+        {% if success %}
+            <p class="success-message">{{ success }}</p>
+        {% elif error %}
+            <p class="error-message">{{ error }}</p>
+        {% endif %}
+
+        <!-- ✅ Table Section -->
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        {% for key in results[0].keys() %}
+                        <th>{{ key }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in results %}
+                    <tr>
+                        {% for value in row.values() %}
+                        <td>{{ value }}</td>
+                        {% endfor %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ✅ Buttons and Email Form Section -->
+        <div class="actions">
+            <!-- Download Button -->
+            <a href="{{ url_for('static', filename='student_results.xlsx') }}" download class="button download-btn">Download Results</a>
+            
+            <!-- Email Form -->
+            <form action="/results" method="post" class="email-form">
+                <input type="email" name="email" placeholder="Enter email" required class="input-field" />
+                <button type="submit" class="button submit-btn">Send Email</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

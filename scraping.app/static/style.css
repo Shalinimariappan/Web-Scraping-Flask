@@ -1,0 +1,321 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding-top: 50px;
+    box-sizing: border-box;
+}
+
+/* Centering Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    height: 100vh;
+    padding: 20px;
+    text-align: center; /* ✅ Center all text */
+}
+
+/* Header Styles */
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.sub-heading {
+    font-size: 20px;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+.description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+/* Form Container - Centering and Spacing */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* ✅ Uniform Button Style for Upload and Submit */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 180px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+/* ✅ Styling for Submit button */
+.submit-btn {
+    background-color: #3b82f6;
+}
+
+.submit-btn:hover {
+    background-color: #2563eb;
+}
+
+/* ✅ File Name Display */
+.file-name {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #1f2937;
+    font-weight: 500;
+}
+
+/* ✅ Image Section */
+.image-section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+/* ✅ Decorative Balls */
+.ball {
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.blue-ball {
+    width: 80px;
+    height: 80px;
+    background-color: #3b82f6;
+    top: 10%;
+    left: 15%;
+}
+
+.red-ball {
+    width: 60px;
+    height: 60px;
+    background-color: #f43f5e;
+    top: 40%;
+    right: 20%;
+}
+
+.green-ball {
+    width: 100px;
+    height: 100px;
+    background-color: #10b981;
+    bottom: 10%;
+    left: 30%;
+}
+
+/* ✅ Spacer to separate sections */
+.spacer {
+    height: 20px;
+}
+
+/* ✅ Responsive Styles */
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .button {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .sub-heading {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+}
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9fafb;
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+}
+
+/* Container Styling */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Title Styling */
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 20px;
+}
+
+/* ✅ Table Styling */
+.table-container {
+    width: 100%;
+    max-width: 800px;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+th {
+    background-color: #4caf50;
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+tr:hover {
+    background-color: #f1f5f9;
+}
+
+/* ✅ Success & Error Message Styling */
+.success-message {
+    color: #16a34a;
+    background-color: #dcfce7;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.error-message {
+    color: #dc2626;
+    background-color: #fee2e2;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* ✅ Actions Section (Buttons + Form) */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+/* ✅ Uniform Button Styling */
+.button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 36px;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.download-btn {
+    background-color: #3b82f6;
+}
+
+.download-btn:hover {
+    background-color: #2563eb;
+}
+
+.submit-btn {
+    background-color: #f59e0b;
+}
+
+.submit-btn:hover {
+    background-color: #d97706;
+}
+
+/* ✅ Input Field Styling */
+.input-field {
+    width: 280px;
+    padding: 14px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #1f2937;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #3b82f6;
+}
+
+/* ✅ Responsive Styling */
+@media (max-width: 768px) {
+    .table-container {
+        overflow-x: auto;
+    }
+
+    .actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

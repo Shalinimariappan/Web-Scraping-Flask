@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>University of Madras Results Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <script>
+        function displayFileName(event) {
+            const fileInput = event.target;
+            const fileNameContainer = document.getElementById('file-name');
+            if (fileInput.files.length > 0) {
+                fileNameContainer.textContent = `📁 ${fileInput.files[0].name}`;
+            } else {
+                fileNameContainer.textContent = '';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Decorative Balls -->
+        <div class="ball blue-ball"></div>
+        <div class="ball red-ball"></div>
+        <div class="ball green-ball"></div>
+
+        <header>
+            <h1 class="title">University of Madras Results Portal</h1>
+            <p class="sub-heading">Data Made Easy</p>
+            <p class="description">
+                Effortlessly extract and process University of Madras results from Excel and generate detailed reports, download them instantly, and send them via email with ease.
+            </p>
+            
+            <!-- ✅ Form with Upload and Submit buttons -->
+            <form action="/" method="post" enctype="multipart/form-data" class="form-container">
+                <input type="file" name="file" id="file" hidden onchange="displayFileName(event)" />
+                <label for="file" class="button">Upload File</label>
+                <button type="submit" class="button submit-btn">Submit</button>
+            </form>
+
+            <!-- ✅ File Name Display -->
+            <p id="file-name" class="file-name"></p>
+        </header>
+
+        <!-- Spacer -->
+        <div class="spacer"></div>
+
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="{{ url_for('static', filename='Group 35643.png') }}" alt="Sample Excel File">
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            The above image followed by the user. Upload a file in Excel format.
+        </footer>
+    </div>
+</body>
+</html>
